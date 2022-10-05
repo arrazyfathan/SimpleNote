@@ -16,6 +16,7 @@ SELECT *
 FROM noteEntity
 WHERE id = ?;
 
+insertNote:
 INSERT OR REPLACE
 INTO noteEntity(
     id,
