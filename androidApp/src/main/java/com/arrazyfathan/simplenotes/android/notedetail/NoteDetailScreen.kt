@@ -56,7 +56,7 @@ fun NoteDetailScreen(
             modifier = Modifier
                 .background(Color(state.noteColor))
                 .fillMaxSize()
-                .padding(padding)
+                .padding(top = 24.dp, start = 16.dp, end = 16.dp, bottom = 16.dp)
         ) {
             TransparentHintTextField(
                 text = state.noteTitle,

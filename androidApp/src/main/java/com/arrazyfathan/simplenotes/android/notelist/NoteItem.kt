@@ -68,6 +68,8 @@ fun NoteItem(
         Spacer(modifier = Modifier.height(16.dp))
         Text(
             text = formattedDate,
+            fontWeight = FontWeight.Light,
+            fontSize = 12.sp,
             color = Color.DarkGray,
             modifier = Modifier.align(Alignment.End)
         )

@@ -9,6 +9,7 @@ import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -40,9 +41,16 @@ fun MyApplicationTheme(
             secondary = Color(0xFF03DAC5)
         )
     }
+    val MabryPro = FontFamily(
+        Font(R.font.mabrypro_black),
+        Font(R.font.mabrypro_regular),
+        Font(R.font.mabrypro_bold),
+        Font(R.font.mabrypro_medium),
+        Font(R.font.mabrypro_light)
+    )
     val typography = Typography(
         body1 = TextStyle(
-            fontFamily = FontFamily.Default,
+            fontFamily = MabryPro,
             fontWeight = FontWeight.Normal,
             fontSize = 16.sp
         )
