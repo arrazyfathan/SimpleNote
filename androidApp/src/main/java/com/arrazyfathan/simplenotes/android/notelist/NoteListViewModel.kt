@@ -39,22 +39,6 @@ class NoteListViewModel @Inject constructor(
         )
     }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5000), NoteListState())
 
-    init {
-        viewModelScope.launch {
-            (1..10).forEach { index ->
-                noteDataSource.insertNote(
-                    Note(
-                        null,
-                        "Note test $index",
-                        "Content note $index",
-                        RedOrangeHex,
-                        DateTimeUtil.now()
-                    )
-                )
-            }
-        }
-    }
-
     fun loadAllNotes() {
         viewModelScope.launch {
             savedStateHandle["notes"] = noteDataSource.getAllNotes()
